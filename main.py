@@ -1,5 +1,4 @@
 from tweepy.streaming import StreamListener
-from tweepy import OAuthHandler
 from tweepy import Stream
 import tweepy
 import json
@@ -9,12 +8,7 @@ from matplotlib import pyplot as plt
 from FollowSpider import FollowSpider
 from BasicAccount import BasicAccount
 import time
-
-#Variables that contains the user credentials to access Twitter API 
-access_token = "405233890-AyOaC3V3jdIFIWmbsFV7qTflNumAUvBDGHPnh682"
-access_token_secret = "VHAMHDrbQ7eYxlM5vQIKJcZn3Mof236ejWgQEWunoHBIv"
-consumer_key = "W2thDMZFtxzCksYNEXha0Atc1"
-consumer_secret = "7BHZtGFaFA697SUqdq1VwK42ZFkLQk2guKsoMU9LCQF8MalyVd"
+import oAuth
 
 def initDatabase(name):
 	client = MongoClient()
